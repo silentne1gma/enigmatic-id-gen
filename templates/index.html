@@ -1,0 +1,56 @@
+{%extends "layouts.html"%}
+
+{%block body%}
+    <div class="container">
+        <div class="cat cat-1">
+            <h1>Basic Information:</h1>
+            <h3>Name:</h3>
+            <p>{{random["results"][0]["name"]["title"]}}, {{random["results"][0]["name"]["first"]}} {{random["results"][0]["name"]["last"]}}</p>
+    
+            <h3>Date of birth:</h3>
+            <p>Born in: {{random["results"][0]["dob"]["date"]}}</p>
+            <p>Age: {{random["results"][0]["dob"]["age"]}} years old</p>
+            
+            <h3>Phone:</h3>
+            <p>Home: {{random["results"][0]["phone"]}}</p>
+            <p>Cell: {{random["results"][0]["cell"]}}</p>
+            
+            <h3>ID Details:</h3>
+            <p>{{random["results"][0]["id"]["name"]}}</p>
+            <p>{{random["results"][0]["id"]["value"]}}</p>
+    
+            <h3>Nationality:</h3>
+            <p>{{random["results"][0]["nat"]}}</p>
+    
+        </div>
+    
+        <div class="cat cat-2">
+            <h1>Location:</h1>
+            <h3>Street:</h3>
+            <p>{{random["results"][0]["location"]["street"]["number"]}}, {{random["results"][0]["location"]["street"]["name"]}}</p>
+            
+            <h3>City:</h3>
+            <p>{{random["results"][0]["location"]["city"]}}</p>
+    
+            <h3>State:</h3>
+            <p>{{random["results"][0]["location"]["state"]}}</p>
+    
+            <h3>Country:</h3>
+            <p>{{random["results"][0]["location"]["country"]}}</p>
+    
+            <h3>PostCode:</h3>
+            <p>{{random["results"][0]["location"]["postcode"]}}</p>
+        </div>
+    
+        <div class="cat cat-3">
+            <h1>Internet Stuff:</h1>
+            <h3>Email:</h3>
+            <p>{{random["results"][0]["email"]}}</p>
+        
+            <h3>Login Information:</h3>
+            <p>username: {{random["results"][0]["login"]["username"]}}, password: {{random["results"][0]["login"]["password"]}}</p>
+
+        </div>
+
+    </div>
+{%endblock body%}

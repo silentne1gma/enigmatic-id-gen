@@ -1,0 +1,99 @@
+/* color pal : https://coolors.co/3d5a80-98c1d9-e0fbfc-ee6c4d-293241 */
+
+:root{
+    --nav: #293241;
+    --font: #E0FBFC;
+    --cat: #3D5A80;
+    --sec: #98C1D9;
+    --btn: #EE6C4D;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: hsla(202, 46%, 72%, 1);
+    background: linear-gradient(90deg, hsla(202, 46%, 72%, 1) 0%, hsla(182, 82%, 93%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(202, 46%, 72%, 1) 0%, hsla(182, 82%, 93%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(202, 46%, 72%, 1) 0%, hsla(182, 82%, 93%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#98C1D9", endColorstr="#E0FBFC", GradientType=1 );
+}
+#main{
+    text-decoration: none;
+}
+nav, .cat, footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav, footer{
+    width:100%;
+    color: var(--font); 
+    background:var(--nav);
+    transition: ease-in-out .2s;
+    height: 60px;
+}
+
+nav:hover, footer:hover{
+    color: var(--nav); 
+    background:var(--font);
+    transition: ease-in-out .2s;
+}
+
+.container{
+    width:100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cat{
+    background-color: var(--cat);
+    color:var(--font);
+    border: var(--sec) 1px solid;
+    height: 400px;
+    width:400px;
+    flex-direction: column;
+}
+
+
+
+footer{
+    justify-content: space-around;
+}
+
+footer a{
+    color:var(--font);
+    text-decoration: none;
+}
+
+footer:hover a{
+    color: var(--nav);
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    line-height: 1.6rem;
+}
+@media (max-width:1000px){
+    footer, .container{
+        flex-direction: column;
+    }
+    .container{
+        height: 180vh;
+    }
+    footer{
+        height:20vh;
+    }
+}
